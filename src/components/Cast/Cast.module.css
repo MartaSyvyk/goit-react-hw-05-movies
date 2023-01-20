@@ -1,0 +1,37 @@
+.container{
+    height: 100vh;  
+    width: 100vw;
+   font-size: 28;
+   color: #010101;
+   padding:20px;
+   font-size: 24px;
+  
+}
+
+
+.item_container{
+  display:flex;
+  flex-direction: column;
+
+line-height: 2;   
+justify-content: center;
+}
+.list {
+align-items: center;
+  
+
+
+
+}
+
+.p{
+font-size: 24px;
+font-weight: 400;  
+padding-left: 36px;
+}
+
+.p {
+    margin-top: 0;
+    margin-bottom: 20;
+    padding: 0;
+}
