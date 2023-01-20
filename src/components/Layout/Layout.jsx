@@ -1,20 +1,16 @@
-import Header from "components/Header/Header"
-import { Outlet } from "react-router-dom"
-import { lazy, Suspense } from "react";
-import css from '../Layout/Layout.module.css'
-
+import Header from 'components/Header/Header';
+import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
+import css from '../Layout/Layout.module.css';
 
 const Layout = () => {
-
-
-    
-    return  <div className={css.container}
-    
-  >
-      <Header/>
+  return (
+    <div className={css.container}>
+      <Header />
       <Suspense fallback={null}>
-      <Outlet/>
+        <Outlet />
       </Suspense>
     </div>
-}
-export default Layout
+  );
+};
+export default Layout;
