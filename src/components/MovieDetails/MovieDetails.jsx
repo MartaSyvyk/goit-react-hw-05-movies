@@ -11,7 +11,7 @@ const MovieDetails = () => {
   const location = useLocation();
   const loc = useMemo(() => {
     return location.state?.from ?? '///';
-  }, []);
+  }, [location.state?.from]);
 
   useEffect(() => {
     async function fetchData() {

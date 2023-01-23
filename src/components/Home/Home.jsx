@@ -29,7 +29,7 @@ const Home = () => {
     
 
     setSearchParams({ page: page });
-  }, [page]);
+  }, [page, setSearchParams]);
   const handleLoadMore = () => {
     setPage(page + 1);
   };

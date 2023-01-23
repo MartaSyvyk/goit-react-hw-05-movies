@@ -36,7 +36,7 @@ const Movies = () => {
     fetchData();
     setSearchParams({ search: query, page: page });
     
-  }, [query, page]);
+  }, [query, page, setSearchParams]);
 
   const submitHandler = event => {
     event.preventDefault();
