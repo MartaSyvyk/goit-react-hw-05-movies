@@ -16,13 +16,13 @@ const Movies = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log(filter);
+  
 
     async function fetchData() {
       API.fetchSearchingFilms(query, page)
         .then(response => {
           setError(null);
-          setMovies([...movies, ...response]);
+          setMovies(prevMovies => [...prevMovies, ...response]);
         })
         .catch(error => {
           setError(`Nothing was found on your request ${query}`);
@@ -35,7 +35,7 @@ const Movies = () => {
 
     fetchData();
     setSearchParams({ search: query, page: page });
-    console.log(location);
+    
   }, [query, page]);
 
   const submitHandler = event => {

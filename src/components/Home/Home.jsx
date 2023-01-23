@@ -17,7 +17,7 @@ const Home = () => {
     async function fetchData() {
       API.fetchTrendingFilms(page)
         .then(response => {
-          setMovies([...movies, ...response]);
+          setMovies(prevMovies => [...prevMovies, ...response]);
           setError(null);
         })
         .catch(error => {
@@ -26,6 +26,7 @@ const Home = () => {
     }
 
     fetchData();
+    
 
     setSearchParams({ page: page });
   }, [page]);

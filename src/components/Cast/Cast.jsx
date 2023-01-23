@@ -14,7 +14,7 @@ const Cast = () => {
       console.log(response.cast);
     }
     fetchData();
-  }, []);
+  }, [movieId]);
 
   if (!cast || cast.length === 0) {
     return <div className={css.container}>No cast info </div>;

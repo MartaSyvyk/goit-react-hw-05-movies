@@ -11,7 +11,7 @@ const MovieDetails = () => {
   const location = useLocation();
   const loc = useMemo(() => {
     return location.state?.from ?? '///';
-  }, [movie]);
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -19,7 +19,7 @@ const MovieDetails = () => {
       setMovie(response);
     }
     fetchData();
-  }, []);
+  }, [movieId]);
 
   const {
     poster_path,
